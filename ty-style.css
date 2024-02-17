@@ -1,0 +1,80 @@
+:root{
+    --text: white;
+    --background: #071630;
+    --highlight: #ff7400;
+    --buttontext: white;
+    --secondary: #172845;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+
+.fade-in-active {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--text);
+}
+
+/* Typography */
+body {
+    line-height: 1.5;
+    background-color: var(--background);
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    margin-top: 50px;
+    font-family: 'Anton';
+    font-size: 3rem;
+}
+
+.hero-content {
+    margin-top: 40px;
+    font-family: 'Roboto';
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--highlight);
+}
+
+.hero-c {
+    margin-top: 40px;
+    text-decoration: none;
+    background: var(--highlight);
+    color: var(--buttontext);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   /* Add transition for smooth effect */
+    display: inline-block;
+   /* Necessary for transform to work */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* Initial box shadow */
+   text-align: center;
+   background-position: center;
+}
+
+.hero-c:hover {
+    transform: translateY(-5px);
+   /* Shifts the button up */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+   /* Slightly larger shadow on hover for depth */
+}
